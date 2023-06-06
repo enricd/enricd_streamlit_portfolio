@@ -49,6 +49,9 @@ def home():
     # </div>
     # """, unsafe_allow_html=True)
 
+    # Subtitle
+    st.write(f"""<div class="subtitle" style="text-align: center;">Machine Learning and Software Engineer</div>""", unsafe_allow_html=True)
+
     # Social Icons
     social_icons_data = {
         # Platform: [URL, Icon]
