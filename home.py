@@ -91,12 +91,12 @@ def home():
     st.write("##")
 
     # Download CV button
-    # st.download_button(
-    #     label="📄 Download my CV",
-    #     data=pdf_bytes,
-    #     file_name="Enric_linkedin_cv.pdf",
-    #     mime="application/pdf",
-    # )
+    st.download_button(
+        label="📄 Download my CV",
+        data=pdf_bytes,
+        file_name="Enric_linkedin_cv.pdf",
+        mime="application/pdf",
+    )
 
     st.write("##")
     
