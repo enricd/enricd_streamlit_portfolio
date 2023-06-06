@@ -18,12 +18,12 @@ def home():
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
     # Profile image file
-    with open(current_dir /  "assets/profile_squared.png", "rb") as img_file:
+    with open(current_dir / "assets/profile_squared.png", "rb") as img_file:
         img = "data:image/png;base64," + base64.b64encode(img_file.read()).decode()
 
     # PDF CV file
-    with open(current_dir /  "assets/Enric_linkedin_cv.pdf", "rb") as pdf_file:
-        pdf_bytes = pdf_file.read()
+    # with open(current_dir / "assets/Enric_linkedin_cv.pdf", "rb") as pdf_file:
+    #     pdf_bytes = pdf_file.read()
 
     
     # Top title
@@ -94,12 +94,12 @@ def home():
     st.write("##")
 
     # Download CV button
-    st.download_button(
-        label="📄 Download my CV",
-        data=pdf_bytes,
-        file_name="Enric_linkedin_cv.pdf",
-        mime="application/pdf",
-    )
+    # st.download_button(
+    #     label="📄 Download my CV",
+    #     data=pdf_bytes,
+    #     file_name="Enric_linkedin_cv.pdf",
+    #     mime="application/pdf",
+    # )
 
     st.write("##")
     
