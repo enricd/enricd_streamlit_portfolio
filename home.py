@@ -1,6 +1,9 @@
 import streamlit as st
 import base64
 from pathlib import Path
+import os
+
+
 
 
 def home():
@@ -10,6 +13,16 @@ def home():
         page_title="Enric Domingo's Portfolio",
         page_icon="🍕",
     )
+
+    st.write("printing tree:")
+    def tree_printer(root):
+        for root, dirs, files in os.walk(root):
+            for d in dirs:
+                st.write(os.path.join(root, d))   
+            for f in files:
+                st.write(os.path.join(root, f))
+
+    tree_printer('.')
 
     current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
 
