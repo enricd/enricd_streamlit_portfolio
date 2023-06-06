@@ -1,9 +1,5 @@
 import streamlit as st
 import base64
-from pathlib import Path
-import os
-
-
 
 
 def home():
@@ -14,29 +10,17 @@ def home():
         page_icon="🍕",
     )
 
-    st.write("printing tree:")
-    def tree_printer(root):
-        for root, dirs, files in os.walk(root):
-            for d in dirs:
-                st.write(os.path.join(root, d))   
-            for f in files:
-                st.write(os.path.join(root, f))
-
-    tree_printer('.')
-
-    current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
-
     # CSS styles file
-    with open(current_dir / "styles/main.css") as f:
+    with open("styles/main.css") as f:
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
     # Profile image file
-    with open(current_dir / "assets/profile_squared.png", "rb") as img_file:
+    with open("assets/profile_squared.png", "rb") as img_file:
         img = "data:image/png;base64," + base64.b64encode(img_file.read()).decode()
 
     # PDF CV file
-    # with open(current_dir / "assets/Enric_linkedin_cv.pdf", "rb") as pdf_file:
-    #     pdf_bytes = pdf_file.read()
+    with open("assets/Enric_linkedin_CV.pdf", "rb") as pdf_file:
+        pdf_bytes = pdf_file.read()
 
     
     # Top title
