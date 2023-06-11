@@ -12,7 +12,7 @@ def home():
 
     # CSS styles file
     with open("styles/main.css") as f:
-        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+        st.write(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
     # Profile image file
     with open("assets/profile_squared.png", "rb") as img_file:
@@ -24,7 +24,7 @@ def home():
 
     
     # Top title
-    st.write(f"""<div class="title">Hi! My name is <strong>Enric Domingo</strong>👋</div>""", unsafe_allow_html=True)
+    st.write(f"""<div class="title"><strong>Hi! My name is</strong> Enric Domingo👋</div>""", unsafe_allow_html=True)
 
     # Profile image
     st.write(f"""
